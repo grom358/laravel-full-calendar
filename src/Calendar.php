@@ -31,12 +31,11 @@ class Calendar
      * @var array
      */
     protected $defaultOptions = [
-        'header' => [
-            'left' => 'prev,next today',
+        'headerToolbar' => [
+            'start' => 'prev,next today',
             'center' => 'title',
-            'right' => 'month,agendaWeek,agendaDay',
+            'end' => 'dayGridMonth,timeGridWeek,timeGridDay'
         ],
-        'eventLimit' => true,
     ];
 
     /**
