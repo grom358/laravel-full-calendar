@@ -1,36 +1,21 @@
-# Laravel 6 Full Calendar Helper
+# Laravel 8 Full Calendar Helper
 
-This is a fork of https://github.com/nelkasovic/laravel-full-calendar. A simple helper package to make generating [http://fullcalendar.io](http://fullcalendar.io) in Laravel apps easier. Because the package is abandoned I decided to fork and publish a version which should work with Laravel 6.
+This is a fork of https://github.com/nelkasovic/laravel-full-calendar. A simple helper package to make generating [http://fullcalendar.io](http://fullcalendar.io) in Laravel apps easier. I decided to fork and publish a version which should work with Laravel 8 and Fullcalendar 5.3.
 
 ## Installing
 Require the package with composer using the following command:
 
-    composer require qlick/laravel-full-calendar
+    composer require grom358/laravel-full-calendar
 
 Or add the following to your composer.json's require section and `composer update`
 
 ```json
 "require": {
-	"qlick/laravel-full-calendar": "~1.0"
+	"grom358/laravel-full-calendar": "~1.0"
 }
 ```
 
-### Laravel 5.4 (and earlier)
-
-Register the service provider in your `app.php` config file:
-
-```php
-LaravelFullCalendar\FullCalendarServiceProvider::class,
-```
-
-And optionally create an alias:
-
-```php
-'Calendar' => LaravelFullCalendar\Facades\Calendar::class,
-
-```
-
-### Laravel 5.5+
+### Laravel 8
 The provider and `Calendar` alias will be registered automatically.
 
 You will also need to include [fullcalendar.io](http://fullcalendar.io/)'s files in your HTML.
@@ -233,10 +218,8 @@ Then to display, add the following code to your View:
 <!doctype html>
 <html lang="en">
 <head>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.js"></script>
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.2.7/fullcalendar.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.3.2/main.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.3.2/main.min.js"></script>
 
 
     <style>
